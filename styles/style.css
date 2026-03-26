@@ -65,7 +65,7 @@
   /* END: Переменные h2 */
 }
 
-/* BEGIN: Общие стили */
+/* BEGIN: Общие и вспомогательные стили */
 
 html {
   font-size: var(--font-size-root);
@@ -83,7 +83,15 @@ body,
   background-color: var(--body-bg-color);
 }
 
-/* END: Общие стили */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* END: Общие и вспомогательные стили */
 
 /* BEGIN: Стили шапки сайта */
 .header {
@@ -231,6 +239,16 @@ body,
   line-height: var(--h1-line-height);
   letter-spacing: var(--h1-letter-spacing);
   color: var(--h1-color);
+}
+
+.cover__title-accent {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.cover__title-accent:last-child {
+  margin-bottom: 0;
 }
 
 /* END: Стили секции Cover */
