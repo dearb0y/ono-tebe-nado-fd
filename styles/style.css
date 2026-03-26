@@ -19,12 +19,14 @@
   --font-size-root: 10px;
   --font-size-base: 1.8rem;
   --font-weight-normal: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-base: var(--font-weight-normal);
   --font-style-base: normal;
   --line-height-xs: 1.15;
   --line-height-sm: 1.2;
   --line-height-md: 1.35;
+  --line-height-extra: 1.27;
   --line-height-normal: normal;
   --line-height-base: var(--line-height-sm);
   --text-align-base: left;
@@ -133,19 +135,19 @@ body,
 
 /* BEGIN: Стили логотипа шапки сайта */
 .logo {
-  margin: 0;
-  padding: 0;
   display: block;
   width: 148px;
   height: 105px;
+  margin: 0;
+  padding: 0;
 }
 
 .logo__image {
-  margin: 0;
-  padding: 0;
   display: block;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* END: Стили логотипа шапки сайта */
 
@@ -179,13 +181,14 @@ body,
   line-height: var(--text-line-height);
 }
 /* END: Стили адреса */
+
 /* END: Стили шапки сайта */
 
 /* BEGIN: Стили Section */
 .section {
+  display: block;
   margin: 0;
   padding: 50px 0;
-  display: block;
 }
 
 .section__inner {
@@ -196,12 +199,12 @@ body,
 .section__title {
   margin: 0;
   padding: 0;
+  color: var(--headings-color);
   font-family: var(--headings-font-family);
-  font-size: var(--h2-font-size);
   font-weight: var(--headings-font-weight);
+  font-size: var(--h2-font-size);
   line-height: var(--headings-line-height);
   text-transform: var(--headings-text-transform);
-  color: var(--headings-color);
 }
 /* END: Стили Section */
 
@@ -212,16 +215,16 @@ body,
 
 .cover__inner {
   --dominant-bg-color: #2d436a;
-  margin: 0;
-  padding: 165px 50px 50px;
   position: relative;
   z-index: 1;
   min-height: 757px;
+  margin: 0;
+  padding: 165px 50px 50px;
   background-color: var(--dominant-bg-color);
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .cover__inner::before {
@@ -235,20 +238,72 @@ body,
 .cover__title {
   margin-bottom: 106px;
   padding: 0;
+  color: var(--h1-color);
   font-size: var(--h1-font-size);
   line-height: var(--h1-line-height);
   letter-spacing: var(--h1-letter-spacing);
-  color: var(--h1-color);
 }
 
 .cover__title-accent {
   display: block;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 
 .cover__title-accent:last-child {
   margin-bottom: 0;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: var(--color-secondary);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.cover__description-text {
+  line-height: var(--line-height-extra);
+}
+
+.button {
+  --button-font-size: 2.2rem;
+  --button-font-weight: var(--font-weight-medium);
+  --button-text-align: center;
+  --button-text-transform: uppercase;
+  --button-line-height: var(--line-height-normal);
+  --button-color: var(--color-secondary);
+  --button-bg-color: transparent;
+  margin: 0;
+  padding: 12px 32px;
+  display: inline-block;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-align: var(--button-text-align);
+  text-transform: var(--button-text-transform);
+  text-decoration: none;
+  line-height: var(--button-line-height);
+  color: var(--button-color);
+  background-color: var(--button-bg-color);
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in;
+}
+
+.cover__description-button {
+  padding: 12px 32px;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  border: 1px solid var(--color-secondary);
+  text-align: center;
 }
 
 /* END: Стили секции Cover */
