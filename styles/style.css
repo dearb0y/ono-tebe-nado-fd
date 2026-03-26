@@ -1,1 +1,21 @@
 /* место для вашего кода */
+:root {
+  /* BEGIN: Базовые переменные цветов */
+  --color-primary: red;
+  /* ENG: Базовые переменные цветов */
+  /* BEGIN: Базовые переменные шрифтов */
+  --font-family-base: Raleway, sans-serif;
+  --font-size-root: 16px;
+  --font-size-base: 1rem;
+  --font-weight-normal: 400;
+  --font-weight-base: var(--font-weight-normal);
+  --font-style-base: normal;
+  --line-height-sm: 1.15;
+  --line-height-base: var(--line-height-sm);
+  --text-align-base: left;
+  /* END: Базовые переменные шрифтов */
+}
+
+html {
+  font-size: var(--font-size-root);
+}
