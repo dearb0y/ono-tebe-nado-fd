@@ -1,21 +1,93 @@
-/* место для вашего кода */
+/* Основные стили сайта */
+@counter-style header-menu {
+  system: cyclical 2;
+  symbols: "\0U1241";
+  suffix: " ";
+}
+
 :root {
   /* BEGIN: Базовые переменные цветов */
-  --color-primary: red;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: var(--color-black);
+  --color-secondary: var(--color-white);
   /* ENG: Базовые переменные цветов */
   /* BEGIN: Базовые переменные шрифтов */
-  --font-family-base: Raleway, sans-serif;
-  --font-size-root: 16px;
-  --font-size-base: 1rem;
+  --font-family-base: Raleway, Arial, sans-serif;
+  --font-size-root: 10px;
+  --font-size-base: 1.8rem;
   --font-weight-normal: 400;
+  --font-weight-bold: 700;
   --font-weight-base: var(--font-weight-normal);
   --font-style-base: normal;
-  --line-height-sm: 1.15;
+  --line-height-sm: 1.2;
+  --line-height-md: 1.35;
+  --line-height-normal: 1;
   --line-height-base: var(--line-height-sm);
   --text-align-base: left;
   /* END: Базовые переменные шрифтов */
+  /* BEGIN: Переменные body */
+  --body-font-family: var(--font-family-base);
+  --body-font-size: var(--font-size-base);
+  --body-font-weight: var(--font-weight-base);
+  --body-font-style: var(--font-style-base);
+  --body-line-height: var(--line-height-base);
+  --body-text-align: var(--text-align-base);
+  --body-color: var(--color-primary);
+  --body-bg-color: var(--color-secondary);
+  /* END: Переменные body */
 }
 
 html {
   font-size: var(--font-size-root);
+}
+
+body,
+.page {
+  font-family: v;
+}
+
+/* BEGIN: Стили шапки сайта */
+.header {
+  margin: 0;
+  padding: 92px 0 96px 0;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  column-gap: 46px;
+  align-items: center;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__list-item {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  --link-line-height: var(--line-height-md);
+  --link-color: var(--color-primary);
+
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-bottom: 1px solid currentColor;
 }
