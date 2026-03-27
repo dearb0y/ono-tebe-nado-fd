@@ -1,11 +1,5 @@
 /* Основные стили сайта */
 
-@counter-style header-menu {
-  system: cyclical 2;
-  symbols: "\0U1241";
-  suffix: " ";
-}
-
 :root {
   /* BEGIN: Базовые переменные цветов */
   --color-white: #fff;
@@ -104,10 +98,11 @@ body,
 .header__inner {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
+  justify-items: start;
   align-items: center;
-  column-gap: 46px;
   margin: 0 auto;
   padding: 0 50px;
+  column-gap: 38px;
 }
 
 /* BEGIN: Стили навигации шапки сайта */
@@ -124,12 +119,21 @@ body,
   margin: 0;
 
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 .menu__list-item {
   margin: 0;
   padding: 0;
+  list-style-type: circle;
+}
+
+.menu__list-item:first-child {
+  list-style: none;
+}
+
+.menu__list-item_active .menu__list-link {
+  text-decoration: none;
 }
 /* END: Стили навигации шапки сайта */
 
@@ -161,10 +165,10 @@ body,
   display: block;
 
   margin: 0;
-  border-bottom: 1px solid currentColor;
   padding: 0;
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
   text-transform: var(--link-text-transform);
 }
 /* END: Стили ссылок */
@@ -174,11 +178,17 @@ body,
   margin: 0;
   padding: 0;
   font-style: var(--font-style-base);
+  max-width: 239px;
 }
 
 .address__text {
   --text-line-height: var(--line-height-md);
   line-height: var(--text-line-height);
+}
+
+.header__address {
+  justify-self: end;
+  padding-right: 3px;
 }
 /* END: Стили адреса */
 
@@ -211,15 +221,16 @@ body,
 /* BEGIN: Стили секции Cover */
 .cover {
   display: block;
+  padding: 0;
 }
 
 .cover__inner {
   --dominant-bg-color: #2d436a;
-  position: relative;
-  z-index: 1;
+  display: grid;
+  grid-template-rows: 1fr min-content;
   min-height: 757px;
   margin: 0;
-  padding: 165px 50px 50px;
+  padding: 50px;
   background-color: var(--dominant-bg-color);
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
@@ -227,27 +238,23 @@ body,
   background-size: cover;
 }
 
-.cover__inner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: rgb(0 0 0 / 60%);
-}
-
 .cover__title {
+  align-self: end;
   margin-bottom: 106px;
-  padding: 0;
   color: var(--h1-color);
-  font-size: var(--h1-font-size);
-  line-height: var(--h1-line-height);
-  letter-spacing: var(--h1-letter-spacing);
 }
 
 .cover__title-accent {
   display: block;
   margin: 0 0 20px 0;
   padding: 0;
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+.cover__title-accent:not(:first-child) {
+  margin-right: calc(-1 * var(--h1-letter-spacing));
 }
 
 .cover__title-accent:last-child {
@@ -267,6 +274,7 @@ body,
 
 .cover__description-text {
   line-height: var(--line-height-extra);
+  word-spacing: 0.85em;
 }
 
 .button {
@@ -277,18 +285,18 @@ body,
   --button-line-height: var(--line-height-normal);
   --button-color: var(--color-secondary);
   --button-bg-color: transparent;
-  margin: 0;
-  padding: 12px 32px;
   display: inline-block;
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  text-align: var(--button-text-align);
-  text-transform: var(--button-text-transform);
-  text-decoration: none;
-  line-height: var(--button-line-height);
-  color: var(--button-color);
-  background-color: var(--button-bg-color);
+  margin: 0;
   border: 1px solid currentColor;
+  padding: 12px 32px;
+  color: var(--button-color);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  text-align: var(--button-text-align);
+  text-decoration: none;
+  text-transform: var(--button-text-transform);
+  background-color: var(--button-bg-color);
   cursor: pointer;
 }
 
@@ -299,14 +307,29 @@ body,
 }
 
 .cover__description-button {
+  border: 1px solid var(--color-secondary);
   padding: 12px 32px;
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
-  border: 1px solid var(--color-secondary);
   text-align: center;
 }
 
 /* END: Стили секции Cover */
+
+/* BEGIN: Стили Overlay */
+.has-overlay {
+  position: relative;
+  z-index: 0;
+}
+
+.has-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(0 0 0 / 60%);
+}
+/* END: Стили Overlay */
 
 /* BEGIN: Миксовые стили */
 .page__section {
