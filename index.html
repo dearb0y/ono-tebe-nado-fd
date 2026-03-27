@@ -16,13 +16,13 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item menu__list-item_active">
-              <a class="link menu__list-link">Главная</a>
+              <a class="link">Главная</a>
             </li>
             <li class="menu__list-item">
-              <a class="link menu__list-link" href="#0">Посмотреть лоты</a>
+              <a class="link" href="#0">Посмотреть лоты</a>
             </li>
             <li class="menu__list-item">
-              <a class="link menu__list-link" href="#0">Об аукционе</a>
+              <a class="link" href="#0">Об аукционе</a>
             </li>
           </ul>
         </nav>
@@ -56,9 +56,13 @@
       <section class="section cover page__section">
         <div class="section__inner cover__inner has-overlay">
           <h1 class="section__title cover__title">
-            <span class="cover__title-accent">Оно</span
-            ><span class="cover__title-accent text-center">тебе</span
-            ><span class="cover__title-accent text-right">надо</span>
+            <span class="cover__title-accent aligned-text aligned-text_left"
+              >Оно</span
+            ><span class="cover__title-accent aligned-text aligned-text_center"
+              >тебе</span
+            ><span class="cover__title-accent aligned-text aligned-text_right"
+              >надо</span
+            >
           </h1>
           <div class="cover__description">
             <p class="cover__description-text">
@@ -72,88 +76,89 @@
       <!-- BEGIN: Секция Lots -->
       <section class="section lots page__section">
         <div class="section__inner">
-          <h2 class="section__title">Лоты</h2>
+          <h2 class="section__title lots__title">Лоты</h2>
           <ul class="lots__list">
             <li class="lots__list-item">
               <!-- BEGIN: Карточка лота 1 -->
-              <article class="lot-card">
-                <div class="lot-card__inner">
-                  <!-- Есть логика размещения как контентного изображения-->
-                  <img
-                    class="lot-card__image"
-                    src="./images/card-lot-01.jpg"
-                    alt="Кадр из фильма режиссёра Пола Томаса"
-                  />
-                  <h3 class="lot-card__title">
-                    <a class="lot-card__link" href="#0"
-                      >Фильм режиссёра, который бросил киношколу</a
-                    >
-                  </h3>
-                  <p class="lot-card__description">
-                    Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-                    ставка, если бы вы не знали, что режиссёр — Пол Томас
-                    Андерсон?
-                  </p>
-                </div>
-              </article>
+              <a class="lot-card-link">
+                <article class="lot-card">
+                  <div class="lot-card__inner has-overlay">
+                    <!-- Есть логика размещения как контентного изображения-->
+                    <img
+                      class="lot-card__image"
+                      src="./images/card-lot-01.jpg"
+                      alt="Кадр из фильма режиссёра Пола Томаса"
+                    />
+                    <h3 class="lot-card__title">
+                      Фильм режиссёра, который бросил киношколу
+                    </h3>
+                    <p class="lot-card__description">
+                      Не просто бросил, а ушёл с первой лекции. Какой была бы
+                      ваша ставка, если бы вы не знали, что режиссёр — Пол Томас
+                      Андерсон?
+                    </p>
+                  </div>
+                </article>
+              </a>
               <!-- END: Карточка лота 1 -->
             </li>
             <li class="lots__list-item">
               <!-- BEGIN: Карточка лота 2 -->
-              <article class="lot-card">
-                <div class="lot-card__inner">
-                  <!-- Есть логика размещения как контентного изображения-->
-                  <img
-                    class="lot-card__image"
-                    src="./images/card-lot-02.jpg"
-                    alt="Изображение книги Джеймса Джойса quot"
-                  />
-                  <h3 class="lot-card__title">
-                    <a class="lot-card__link" href="#0"
-                      >Книга, где описан один скучный день из жизни рекламного
-                      агента</a
-                    >
-                  </h3>
-                  <p class="lot-card__description">
-                    Объёмом почти в тысячу страниц. Иногда без знаков препинания
-                    и с переходами на древнеанглийский. В ней одновременно
-                    рассказывается о 16 июня 1904 года и об истории литературы,
-                    начиная с античных времён. И это всё накладывается на
-                    эпическую поэму Гомера. Сколько бы вы поставили на «Улисса»
-                    Джеймса Джойса?
-                  </p>
-                </div>
-              </article>
+              <a class="lot-card-link">
+                <article class="lot-card">
+                  <div class="lot-card__inner has-overlay">
+                    <!-- Есть логика размещения как контентного изображения-->
+                    <img
+                      class="lot-card__image"
+                      src="./images/card-lot-02.jpg"
+                      alt="Изображение книги Джеймса Джойса quot"
+                    />
+                    <h3 class="lot-card__title">
+                      Книга, где описан один скучный день из жизни рекламного
+                      агента
+                    </h3>
+                    <p class="lot-card__description">
+                      Объёмом почти в тысячу страниц. Иногда без знаков
+                      препинания и с переходами на древнеанглийский. В ней
+                      одновременно рассказывается о 16 июня 1904 года и об
+                      истории литературы, начиная с античных времён. И это всё
+                      накладывается на эпическую поэму Гомера. Сколько бы вы
+                      поставили на «Улисса» Джеймса Джойса?
+                    </p>
+                  </div>
+                </article>
+              </a>
               <!-- END: Карточка лота 2 -->
             </li>
             <li class="lots__list-item">
               <!-- BEGIN: Карточка лота 3 -->
-              <article class="lot-card">
-                <div class="lot-card__inner">
-                  <!-- Есть логика размещения как контентного изображения-->
-                  <img
-                    class="lot-card__image"
-                    src="./images/card-lot-03.jpg"
-                    alt="Кадр из фильма режиссёра Пола Томаса"
-                  />
-                  <h3 class="lot-card__title">
-                    <a class="lot-card__link" href="#0"
-                      >Картина, которую повторит даже 5-летний сын маминой
-                      подруги</a
-                    >
-                  </h3>
-                  <p class="lot-card__description">
-                    Ну действительно, там линия, тут кружочек, а здесь и вовсе
-                    что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
-                    котиков... Сколько бы вы на такое поставили, если бы не
-                    знали, что это — одна из революционных работ Кандинского?
-                  </p>
-                </div>
-              </article>
+              <a class="lot-card-link"
+                ><article class="lot-card">
+                  <div class="lot-card__inner has-overlay">
+                    <!-- Есть логика размещения как контентного изображения-->
+                    <img
+                      class="lot-card__image"
+                      src="./images/card-lot-03.jpg"
+                      alt="Кадр из фильма режиссёра Пола Томаса"
+                    />
+                    <h3 class="lot-card__title">
+                      Картина, которую повторит даже 5-летний сын маминой
+                      подруги
+                    </h3>
+                    <p class="lot-card__description">
+                      Ну действительно, там линия, тут кружочек, а здесь и вовсе
+                      что-то похожее на инфузорию-туфельку. Никаких полей,
+                      лесов, котиков... Сколько бы вы на такое поставили, если
+                      бы не знали, что это — одна из революционных работ
+                      Кандинского?
+                    </p>
+                  </div>
+                </article></a
+              >
               <!-- END: Карточка лота 3 -->
             </li>
           </ul>
-          <a class="link" href="#0">Посмотреть больше</a>
+          <a class="link lots__link" href="#0">Посмотреть больше</a>
         </div>
       </section>
       <!-- END: Секция Lots -->
