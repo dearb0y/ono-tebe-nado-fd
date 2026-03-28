@@ -10,6 +10,7 @@
 
   /* BEGIN: Базовые переменные шрифтов */
   --font-family-base: Raleway, Arial, sans-serif;
+  --font-size-content: 2rem;
   --font-size-root: 10px;
   --font-size-base: 1.8rem;
   --font-weight-normal: 400;
@@ -153,10 +154,25 @@ body,
 /* BEGIN: Стили логотипа шапки сайта */
 .logo {
   display: block;
-  width: 148px;
-  height: 105px;
   margin: 0;
   padding: 0;
+}
+
+.logo_theme_black {
+  width: 148px;
+  height: 105px;
+}
+
+.logo_theme_white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 64px 52px;
+  overflow: hidden;
+  background-color: var(--color-primary);
 }
 
 .logo__image {
@@ -173,7 +189,7 @@ body,
   --link-line-height: var(--line-height-normal);
   --link-color: var(--color-primary);
   --link-text-transform: lowercase;
-  display: block;
+  display: inline-flex;
 
   margin: 0;
   padding: 0;
@@ -372,7 +388,7 @@ body,
   margin: 0;
   padding: 0;
   color: var(--card-color);
-  font-size: 2rem;
+  font-size: var(--font-size-content);
 }
 
 .lot-card__inner {
@@ -401,18 +417,58 @@ body,
 
 .lot-card__title {
   margin: 0;
-  border-bottom: 1px solid currentColor;
   padding: 0;
   color: var(--h3-color);
   font-family: var(--headings-font-family);
   font-weight: var(--headings-font-weight);
   font-size: var(--h3-font-size);
   line-height: var(--h3line-height);
+  text-decoration: underline;
   text-decoration-skip-ink: none;
   text-transform: var(--headings-text-transform);
 }
+
+.lots__link {
+  padding-left: 40px;
+  font-size: 2rem;
+}
+/* END: Стили секции Lots */
+
+/* BEGIN: Стили секции About */
+.about {
+  display: block;
+  padding-top: 35px;
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 334px) 1fr;
+  gap: 25px;
+}
+
+.about__logo {
+  justify-self: center;
+}
+
+.about__title {
+  align-self: center;
+}
+
+.about__content {
+  grid-column: 2;
+  font-size: var(--font-size-content);
+}
+
+.about__content p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 /* BEGIN: Миксовые стили */
 .page__section {
   margin-bottom: 130px;
+}
+
+.page__lots {
+  margin-bottom: 70px;
 }
 /* END: Миксовые стили */
