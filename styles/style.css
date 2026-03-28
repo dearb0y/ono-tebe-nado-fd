@@ -9,7 +9,6 @@
   /* ENG: Базовые переменные цветов */
 
   /* BEGIN: Базовые переменные шрифтов */
-  --font-family-base: Raleway, sans-serif;
   --font-size-content: 2rem;
   --font-size-root: 10px;
   --font-size-base: 1.8rem;
@@ -28,7 +27,6 @@
   /* END: Базовые переменные шрифтов */
 
   /* BEGIN: Переменные body */
-  --body-font-family: var(--font-family-base);
   --body-font-size: var(--font-size-base);
   --body-font-weight: var(--font-weight-base);
   --body-font-style: var(--font-style-base);
@@ -38,7 +36,6 @@
   /* END: Переменные body */
 
   /* BEGIN: Переменные заголовков */
-  --headings-font-family: var(--font-family-base);
   --headings-font-weight: var(--font-weight-bold);
   --headings-line-height: var(--line-height-normal);
   --headings-text-transform: uppercase;
@@ -247,7 +244,6 @@ body,
   margin: 0 0 27px 0;
   padding: 0;
   color: var(--headings-color);
-  font-family: var(--headings-font-family);
   font-weight: var(--headings-font-weight);
   font-size: var(--h2-font-size);
   line-height: var(--headings-line-height);
@@ -432,7 +428,6 @@ body,
   margin: 0;
   padding: 0;
   color: var(--h3-color);
-  font-family: var(--headings-font-family);
   font-weight: var(--headings-font-weight);
   font-size: var(--h3-font-size);
   line-height: var(--h3line-height);
