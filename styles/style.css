@@ -80,6 +80,11 @@ body,
   background-color: var(--body-bg-color);
 }
 
+.content {
+  margin: 0;
+  padding: 0 0 48px 0;
+}
+
 .aligned-text {
   display: block;
 }
@@ -170,7 +175,7 @@ body,
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  padding: 64px 52px;
+  padding: 63px 45px;
   overflow: hidden;
   background-color: var(--color-primary);
 }
@@ -184,11 +189,11 @@ body,
 }
 /* END: Стили логотипа шапки сайта */
 
-/* BEGIN: Стили ссылок */
+/* BEGIN: Стили ссылки */
 .link {
   --link-line-height: var(--line-height-normal);
-  --link-color: var(--color-primary);
   --link-text-transform: lowercase;
+  --link-color: var(--color-primary);
   display: inline-flex;
 
   margin: 0;
@@ -199,26 +204,27 @@ body,
   text-transform: var(--link-text-transform);
 }
 
-:is(.button, .link):is(:focus, :hover) {
+.link:is(:focus, :hover) {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }
-/* END: Стили ссылок */
+/* END: Стили ссылки */
 
 /* BEGIN: Стили адреса */
 .address {
-  max-width: 239px;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-style: var(--font-style-base);
 }
 
 .address__text {
-  --text-line-height: var(--line-height-md);
-  line-height: var(--text-line-height);
+  line-height: var(--line-height-md);
 }
 
 .header__address {
+  max-width: 239px;
   justify-self: end;
   padding-right: 3px;
 }
@@ -308,12 +314,13 @@ body,
   word-spacing: 0.85em;
 }
 
+/* BEGIN: Стили кнопки */
 .button {
   --button-font-size: 2.2rem;
   --button-font-weight: var(--font-weight-medium);
+  --button-line-height: var(--line-height-normal);
   --button-text-align: center;
   --button-text-transform: uppercase;
-  --button-line-height: var(--line-height-normal);
   --button-color: var(--color-secondary);
   --button-bg-color: transparent;
   display: inline-flex;
@@ -331,10 +338,11 @@ body,
   cursor: pointer;
 }
 
-.button:is:(:focus, :hover) {
+.button:is(:focus, :hover) {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }
+/* END: Стили кнопки */
 
 /* END: Стили секции Cover */
 
@@ -371,6 +379,7 @@ body,
   list-style: none;
 }
 
+/* BEGIN: Стили карточки лота */
 .lot-card-link {
   display: block;
   width: 100%;
@@ -378,6 +387,11 @@ body,
   margin: 0;
   padding: 0;
   cursor: pointer;
+}
+
+.lot-card-link:is(:focus, :hover) {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .lot-card {
@@ -443,7 +457,8 @@ body,
 .about__inner {
   display: grid;
   grid-template-columns: minmax(0, 334px) 1fr;
-  gap: 25px;
+  row-gap: 8px;
+  column-gap: 25px;
 }
 
 .about__logo {
@@ -452,19 +467,126 @@ body,
 
 .about__title {
   align-self: center;
+  margin: 0;
 }
 
 .about__content {
   grid-column: 2;
+  padding-right: 5px;
   font-size: var(--font-size-content);
 }
 
 .about__content p:not(:last-child) {
   margin-bottom: 24px;
 }
+/* END: Стили секции About */
+
+/* BEGIN: Стили подвала сайта */
+.footer {
+  margin: 0;
+  padding: 82px 0;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 38px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.footer__address {
+  margin: 0;
+  padding: 0;
+}
+
+/* BEGIN: Стили навигации подвала сайта */
+.footer__menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__menu-list-item_active .link {
+  text-decoration: none;
+}
+
+.footer__menu-list-item_active :is(.link:focus, .link:hover) {
+  opacity: 1;
+  transition: none;
+}
+/* END: Стили навигации подвала сайта */
+
+/* BEGIN: Стили социальных сетей */
+.socials {
+  margin: 0;
+  padding: 0;
+  justify-self: end;
+}
+
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  margin: 0;
+  padding: 0;
+}
+
+/* BEGIN: Стили иконочной ссылки */
+.icon-link {
+  --icon-link-font-size: 4.8rem;
+  --icon-link-line-height: var(--line-height-normal);
+  --icon-link-text-transform: lowercase;
+  --icon-link-color: var(--color-primary);
+  --icon-link-bg-color: transparent;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  color: var(--icon-link-color);
+  font-size: var(--icon-link-font-size);
+  line-height: var(--icon-link-line-height);
+  text-transform: var(--icon-link-text-transform);
+  background-color: var(--icon-link-bg-color);
+}
+
+.icon-link:is(:focus, :hover) {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.icon-link__image {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+/* END: Стили иконочной ссылки */
+
+/* END: Стили социальных сетей */
+
+/* END: Стили подвала сайта */
 
 /* BEGIN: Миксовые стили */
-.page__section {
+.page__section:not(:last-child) {
   margin-bottom: 130px;
 }
 
