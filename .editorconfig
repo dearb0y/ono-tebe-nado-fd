@@ -8,6 +8,14 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.html]
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+[*.css]
+trim_trailing_whitespace = false
+insert_final_newline = false
+
 [*.md]
 trim_trailing_whitespace = false
 insert_final_newline = false

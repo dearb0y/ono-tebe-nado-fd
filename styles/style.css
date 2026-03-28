@@ -496,6 +496,11 @@ body,
 }
 
 /* BEGIN: Стили навигации подвала сайта */
+.footer__menu {
+  margin: 0;
+  padding: 0;
+}
+
 .footer__menu-list {
   display: flex;
   justify-content: center;
