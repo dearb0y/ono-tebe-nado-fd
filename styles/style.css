@@ -72,7 +72,6 @@ body,
 .page {
   padding: 0;
   color: var(--body-color);
-  font-family: var(--body-font-family);
   font-weight: var(--body-font-weight);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
