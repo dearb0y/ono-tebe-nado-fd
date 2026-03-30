@@ -437,7 +437,7 @@ body,
 }
 
 .lots__link {
-  padding-left: 40px;
+  margin-left: 40px;
   font-size: 2rem;
 }
 /* END: Стили секции Lots */
