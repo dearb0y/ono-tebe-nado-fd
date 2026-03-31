@@ -258,13 +258,13 @@ body,
 }
 
 .cover__inner {
-  --dominant-bg-color: #2d436a;
+  --cover-dominant-bg-color: #2d436a;
   display: grid;
   grid-template-rows: 1fr min-content;
   min-height: 757px;
   margin: 0;
   padding: 50px;
-  background-color: var(--dominant-bg-color);
+  background-color: var(--cover-dominant-bg-color);
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -374,6 +374,11 @@ body,
   list-style: none;
 }
 
+.lots__list-item {
+  margin: 0;
+  padding: 0;
+}
+
 /* BEGIN: Стили карточки лота */
 .lot-card-link {
   display: block;
@@ -391,6 +396,8 @@ body,
 
 .lot-card {
   --card-color: var(--color-secondary);
+  --card-dominant-bg-color: var(--color-primary);
+  --card-bg-image: url("../images/card-lot-01.jpg");
   display: block;
   width: 100%;
   height: 100%;
@@ -398,6 +405,25 @@ body,
   padding: 0;
   color: var(--card-color);
   font-size: var(--font-size-content);
+  background-color: var(--card-dominant-bg-color);
+  background-size: cover;
+  background-position: center;
+  background-image: var(--card-bg-image);
+}
+
+.lot-card_type_film {
+  --card-dominant-bg-color: #253929;
+  --card-bg-image: url("../images/card-lot-0z.jpg");
+}
+
+.lot-card_type_book {
+  --card-dominant-bg-color: #672129;
+  --card-bg-image: url("../images/card-lot-0z.jpg");
+}
+
+.lot-card_type_picture {
+  --card-dominant-bg-color: #c8880e;
+  --card-bg-image: url("../images/card-lot-0z.jpg");
 }
 
 .lot-card__inner {
@@ -459,18 +485,17 @@ body,
   justify-self: center;
 }
 
-.about__title {
+.about__content {
   align-self: center;
   margin: 0;
 }
 
-.about__content {
-  grid-column: 2;
+.about__text {
   padding-right: 5px;
   font-size: var(--font-size-content);
 }
 
-.about__content p:not(:last-child) {
+.about__text p:not(:last-child) {
   margin-bottom: 24px;
 }
 /* END: Стили секции About */
